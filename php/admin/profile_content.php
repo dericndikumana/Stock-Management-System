@@ -45,30 +45,34 @@ if (!empty($_SESSION['success'])) {
         </tr>
     </thead>
     <tbody>
-    <?php while ($row = $result->fetch_assoc()): ?>
-        <tr id="userRow<?= $row['id'] ?>">
-            <td><?= htmlspecialchars($row['id']) ?></td>
-            <td><?= htmlspecialchars($row['full_name']) ?></td>
-            <td><?= htmlspecialchars($row['username']) ?></td>
-            <td><?= htmlspecialchars($row['role']) ?></td>
-            <td>
-                <button class="btn btn-sm btn-warning" 
-                        data-bs-toggle="modal" 
-                        data-bs-target="#editUserModal" 
-                        data-id="<?= $row['id'] ?>" 
-                        data-full_name="<?= htmlspecialchars($row['full_name'], ENT_QUOTES) ?>" 
-                        data-username="<?= htmlspecialchars($row['username'], ENT_QUOTES) ?>" 
-                        data-role="<?= htmlspecialchars($row['role'], ENT_QUOTES) ?>">Edit</button>
+<?php 
+$counter = 1; // Add this counter variable
+while ($row = $result->fetch_assoc()): ?>
+    <tr id="userRow<?= $row['id'] ?>">
+        <td><?= $counter ?></td>  <!-- Change this line -->
+        <td><?= htmlspecialchars($row['full_name']) ?></td>
+        <td><?= htmlspecialchars($row['username']) ?></td>
+        <td><?= htmlspecialchars($row['role']) ?></td>
+        <td>
+            <button class="btn btn-sm btn-warning" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#editUserModal" 
+                    data-id="<?= $row['id'] ?>" 
+                    data-full_name="<?= htmlspecialchars($row['full_name'], ENT_QUOTES) ?>" 
+                    data-username="<?= htmlspecialchars($row['username'], ENT_QUOTES) ?>" 
+                    data-role="<?= htmlspecialchars($row['role'], ENT_QUOTES) ?>">Edit</button>
 
-                <button class="btn btn-sm btn-danger" 
-                        data-bs-toggle="modal" 
-                        data-bs-target="#deleteUserModal" 
-                        data-id="<?= $row['id'] ?>" 
-                        data-username="<?= htmlspecialchars($row['username'], ENT_QUOTES) ?>">Delete</button>
-            </td>
-        </tr>
-    <?php endwhile; ?>
-    </tbody>
+            <button class="btn btn-sm btn-danger" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#deleteUserModal" 
+                    data-id="<?= $row['id'] ?>" 
+                    data-username="<?= htmlspecialchars($row['username'], ENT_QUOTES) ?>">Delete</button>
+        </td>
+    </tr>
+<?php 
+$counter++; // Increment the counter
+endwhile; ?>
+</tbody>
 </table>
 
 <!-- Create User Modal -->
