@@ -71,14 +71,14 @@ $basePath = ($role === 'admin') ? '/sms/php/admin/' : '/sms/php/user/';
     <ul class="nav flex-column">
       <li class="nav-item mb-2"><a href="<?= $basePath ?>dashboard.php" class="nav-link text-white">🏠 Dashboard</a></li>
       <li class="nav-item mb-2 dropdown">
-        <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">📦 Items</a>
+        <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" class="btn btn-success">📦 Inventory</a>
         <ul class="dropdown-menu dropdown-menu-dark">
-          <li><a class="dropdown-item" href="<?= $basePath ?>items.php">🧾 View Items</a></li>
-          <li><a class="dropdown-item" href="<?= $basePath ?>stock_in.php">📥 Stock In</a></li>
-          <li><a class="dropdown-item" href="<?= $basePath ?>stock_out.php">📤 Stock Out</a></li>
+          <li><a class="dropdown-item" href="<?= $basePath ?>items.php" >🧾 Inventory List</a></li>
+          <li><a class="dropdown-item" href="<?= $basePath ?>stock_in.php">📥 Receive Stock</a></li>
+          <li><a class="dropdown-item" href="<?= $basePath ?>stock_out.php">📤 Sales</a></li>
         </ul>
       </li>
-      <li class="nav-item mb-2"><a href="<?= $basePath ?>receipt_history.php" class="nav-link text-white">🧾 System Report</a></li>
+      <li class="nav-item mb-2"><a href="<?= $basePath ?>receipt_history.php" class="nav-link text-white">🧾 System Reports</a></li>
       <li class="nav-item mb-2"><a href="<?= $basePath ?>profile.php" class="nav-link text-white">⚙️ Settings</a></li>
       <li class="nav-item"><a href="/sms/php/logout.php" class="nav-link text-danger"> Logout</a></li>
     </ul>
@@ -94,11 +94,11 @@ $basePath = ($role === 'admin') ? '/sms/php/admin/' : '/sms/php/user/';
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="<?= $basePath ?>dashboard.php" class="nav-link text-white">🏠 Dashboard</a></li>
         <li class="nav-item mb-2 dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">📦 Items</a>
+          <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">📦 Inventory</a>
           <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="<?= $basePath ?>items.php">🧾 View Items</a></li>
-            <li><a class="dropdown-item" href="<?= $basePath ?>stock_in.php">📥 Stock In</a></li>
-            <li><a class="dropdown-item" href="<?= $basePath ?>stock_out.php">📤 Stock Out</a></li>
+            <li><a class="dropdown-item" href="<?= $basePath ?>items.php">🧾 Inventory List</a></li>
+            <li><a class="dropdown-item" href="<?= $basePath ?>stock_in.php">📥 Receive stock</a></li>
+            <li><a class="dropdown-item" href="<?= $basePath ?>stock_out.php">📤 Sales</a></li>
           </ul>
         </li>
         <li class="nav-item mb-2"><a href="<?= $basePath ?>receipt_history.php" class="nav-link text-white">🧾 System Report</a></li>

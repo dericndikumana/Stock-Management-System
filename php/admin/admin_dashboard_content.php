@@ -28,7 +28,9 @@ $zig_out = $conn->query("SELECT SUM(st.quantity * i.unit_price) as total
 ?>
 
 <div class="container">
+    
     <h4 class="mb-4">📊 Admin Dashboard Overview</h4>
+    
     <div class="row g-3">
         <!-- Total Users -->
         <div class="col-md-4">
@@ -41,7 +43,7 @@ $zig_out = $conn->query("SELECT SUM(st.quantity * i.unit_price) as total
         <!-- Total Items -->
         <div class="col-md-4">
             <div class="card text-white bg-primary shadow p-3">
-                <h5>📦 Total Items</h5>
+                <h5>📦 Total Products</h5>
                 <p class="fw-bold fs-4"><?= $total_items ?></p>
             </div>
         </div>
@@ -49,7 +51,7 @@ $zig_out = $conn->query("SELECT SUM(st.quantity * i.unit_price) as total
         <!-- Stock Value (USD) -->
         <div class="col-md-4">
             <div class="card text-white bg-success shadow p-3">
-                <h5>💰 Stock Value (USD)</h5>
+                <h5>💰 Total Inventory Value (USD)</h5>
                 <p class="fw-bold fs-4">$<?= number_format($usd, 2) ?></p>
             </div>
         </div>
@@ -57,7 +59,7 @@ $zig_out = $conn->query("SELECT SUM(st.quantity * i.unit_price) as total
         <!-- Stock Value (ZIG) -->
         <div class="col-md-4">
             <div class="card text-white bg-warning shadow p-3">
-                <h5>💰 Stock Value (ZIG)</h5>
+                <h5>💰 Total Inventory Value (ZIG)</h5>
                 <p class="fw-bold fs-4"><?= number_format($zig, 2) ?> ZIG</p>
             </div>
         </div>
@@ -65,7 +67,7 @@ $zig_out = $conn->query("SELECT SUM(st.quantity * i.unit_price) as total
         <!-- Stock Out (USD) -->
         <div class="col-md-4">
             <div class="card text-white bg-danger shadow p-3">
-                <h5>📤 Stock Out (USD)</h5>
+                <h5>📤 Out of Stock Items (USD)</h5>
                 <p class="fw-bold fs-4">$<?= number_format($usd_out, 2) ?></p>
             </div>
         </div>
@@ -73,7 +75,7 @@ $zig_out = $conn->query("SELECT SUM(st.quantity * i.unit_price) as total
         <!-- Stock Out (ZIG) -->
         <div class="col-md-4">
             <div class="card text-dark bg-light shadow p-3">
-                <h5>📤 Stock Out (ZIG)</h5>
+                <h5>📤 Out of Stock Items (ZIG)</h5>
                 <p class="fw-bold fs-4"><?= number_format($zig_out, 2) ?> ZIG</p>
             </div>
         </div>
@@ -96,7 +98,7 @@ $users_result = $stmt->get_result();
 ?>
 
 <div class="mt-5">
-    <h5>👥 System Users</h5>
+    <h5>👥 Total Users</h5>
     <div style="max-height: 300px; overflow-y: auto;">
         <table class="table table-bordered table-striped mt-3">
             <thead class="table-dark">

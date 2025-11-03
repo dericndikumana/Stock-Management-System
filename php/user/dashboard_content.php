@@ -47,7 +47,7 @@ $stockout_query->close();
     <div class="col-md-3">
       <div class="card text-white bg-primary mb-3">
         <div class="card-body">
-          <h5 class="card-title">📦 Total Items</h5>
+          <h5 class="card-title">📦 Total Products</h5>
           <p class="card-text fs-4"><?= number_format($total_items) ?></p>
         </div>
       </div>
@@ -58,7 +58,7 @@ $stockout_query->close();
     <div class="col-md-3">
       <div class="card text-white bg-success mb-3">
         <div class="card-body">
-          <h5 class="card-title">💰 Stock Value (<?= $curr ?>)</h5>
+          <h5 class="card-title">💰 Total Inventory Value (<?= $curr ?>)</h5>
           <p class="card-text fs-5"><?= number_format($stock_values[$curr] ?? 0, 2) ?> <?= $curr ?></p>
         </div>
       </div>
@@ -70,7 +70,7 @@ $stockout_query->close();
     <div class="col-md-3">
       <div class="card text-white bg-danger mb-3">
         <div class="card-body">
-          <h5 class="card-title">📤 Stock Out (<?= $curr ?>)</h5>
+          <h5 class="card-title">📤 Out of Stock Items (<?= $curr ?>)</h5>
           <p class="card-text fs-5"><?= number_format($stockout_values[$curr] ?? 0, 2) ?> <?= $curr ?></p>
         </div>
       </div>

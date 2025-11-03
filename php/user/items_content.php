@@ -57,7 +57,7 @@ $result = $stmt->get_result();
   <!-- Buttons: Add & Search -->
   <div class="d-flex justify-content-between align-items-center mb-3">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addItemModal">
-      ➕ Add New Item
+      ➕ Add Product
     </button>
 
     <form method="GET" class="d-flex" role="search" aria-label="Item search form">

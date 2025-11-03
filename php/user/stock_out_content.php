@@ -186,7 +186,7 @@ $stockOutGroups = getStockOutGroups($conn, $user_id, $search_out, $limit, $offse
     <input type="text" name="search_out" class="form-control" placeholder="Search customer or receipt..." value="<?= htmlspecialchars($search_out) ?>">
     <button type="submit" class="btn btn-primary">Search</button>
   </form>
-  <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#stockOutModal">+ Add Stock Out</button>
+  <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#stockOutModal">+ Record Sale</button>
 </div>
 
 <div class="table-responsive">

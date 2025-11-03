@@ -105,12 +105,12 @@ $deletedStocks = getStockData($conn, $user_id, $search_deleted, 1, $limit, $offs
 <ul class="nav nav-tabs mb-3" id="stockTab" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="active-tab" data-bs-toggle="tab" data-bs-target="#active" type="button" role="tab" aria-controls="active" aria-selected="true">
-      Active Stock In
+      Active Inventort List
     </button>
   </li>
   <li class="nav-item" role="presentation">
     <button class="nav-link" id="deleted-tab" data-bs-toggle="tab" data-bs-target="#deleted" type="button" role="tab" aria-controls="deleted" aria-selected="false">
-      Deleted Stock In
+      Deleted Inventory
     </button>
   </li>
 </ul>
@@ -126,7 +126,7 @@ $deletedStocks = getStockData($conn, $user_id, $search_deleted, 1, $limit, $offs
             <input type="text" name="search_active" class="form-control" placeholder="Search item or note..." value="<?= htmlspecialchars($search_active) ?>">
             <button type="submit" class="btn btn-primary">Search</button>
         </form>
-        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#stockInModal">+ Add Stock In</button>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#stockInModal">+ Add Inventory</button>
     </div>
 
     <div class="table-responsive">
